@@ -22,22 +22,24 @@ Create & connect to a new GitHub repository
   git commit -m "First commit"
 </pre>
 
-### Step (Heroku)
+### Step 3 (Heroku)
 
-Create a new project in Heroku
-Choose GitHub as Deployment Method and connect to your GitHub account
-Connect the Heroku project to your repository by entering its name
-Enable automatic deployments to master branch
+1. Create a new project in Heroku
+2. Choose GitHub as Deployment Method and connect to your GitHub account
+3. Connect the Heroku project to your repository by entering its name
+4. Enable automatic deployments to master branch
 
-### Step (MySQL)
+### Step 4 (MySQL)
 
-Create a MySQL database in Heroku
-Head to resources and install ClearDB MySQL
-Connect it to your Heroku appplication
-Head to settings -> Reveal Config Vars -> copy CLEARDB_DATABASE_URL
+1. In Heroku, head to resources and install ClearDB MySQL
+2. Connect it to your Heroku appplication
+3. Head to settings -> Reveal Config Vars -> copy CLEARDB_DATABASE_URL
+4. Insert these details into server -> configs -> replace all values
+5. Use [MySQLWorkbeng](https://dev.mysql.com/downloads/workbench/) or another software to view database data
 
-mysql://[username]:[password]@[host]/[database]?reconnect=true
-Insert these details into server -> configs -> replace all values
-Use MySQLWorkbench or another software to view database data
+`ClearDB MySQL Fields: mysql://[username]:[password]@[host]/[database]?reconnect=true`
 
-### Step (?)
+### Step 5 (Configs)
+
+1. Enter your heroku url in the .env file in your ./client folder
+2. Add all env configs to Heroku in Config Vars in settings

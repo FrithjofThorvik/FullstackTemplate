@@ -16,7 +16,7 @@ class Service {
 			name: name,
 			email: email,
 		};
-
+		console.log(getBackendUrl("/api/user"));
 		// Make api request
 		const response: any = await axios.post(getBackendUrl("/api/user"), payload);
 

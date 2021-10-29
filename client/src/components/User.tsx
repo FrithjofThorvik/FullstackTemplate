@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { StoreState } from "../data/store";
+
 import { useStoreSelector } from "../hooks/useStore";
+import { IUser } from "../types/interfaces";
+import { StoreState } from "../misc/store";
 
 import "../scss/components/User.scss";
-import { IUser } from "../types/interfaces";
 
 interface IUserProps {}
 
