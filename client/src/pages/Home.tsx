@@ -1,11 +1,19 @@
 import { FC } from "react";
 
-import "../scss/components/pages/Home.scss";
+import UserForm from "../components/UserForm";
+import User from "../components/User";
+
+import "../scss/pages/Home.scss";
 
 interface IHomeProps {}
 
 const Home: FC<IHomeProps> = (): JSX.Element => {
-	return <div className="home">Home</div>;
+	return (
+		<div className="home">
+			<User />
+			<UserForm />
+		</div>
+	);
 };
 
 export default Home;
