@@ -7,6 +7,8 @@
 		"node": "16.10.0"
 	},
 	"scripts": {
+		"start:server": "npm start --prefix server",
+		"start:client": "npm start --prefix client",
 		"web": "cd frontend && npm i && npm run build && npm start",
 		"server": "cd server && npm i && npm start",
 		"deploy": "cp -a client/build/. public/",

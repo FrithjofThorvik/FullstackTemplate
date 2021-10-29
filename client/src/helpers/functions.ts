@@ -6,7 +6,7 @@
 export const getBackendUrl = (endpoint: string): string => {
 	const url =
 		!process.env.NODE_ENV || process.env.NODE_ENV === "development"
-			? `${process.env.REACT_APP_API_URL_DEV}${endpoint}`
-			: `${process.env.REACT_APP_API_URL_DEPLOYMENT}${endpoint}`;
+			? `http://localhost:3001${endpoint}`
+			: `https://fullstack-template-frithjof.herokuapp.com${endpoint}`;
 	return url;
 };
