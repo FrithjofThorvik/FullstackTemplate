@@ -16,13 +16,13 @@ export const createOrUpdateUser = async (
 	// Check if user should be created or updated
 	if (!user) {
 		// Create new user
-		user = await db.User.create({
+		await db.User.create({
 			name: name,
 			email: email,
 		});
 	} else {
 		// Update user instance
-		user = await db.User.update(
+		await db.User.update(
 			{
 				name: name,
 			},
@@ -34,6 +34,9 @@ export const createOrUpdateUser = async (
 		);
 	}
 
+	// Fetch new user instance
+	user = await db.User.findOne({ where: { email: email } });
+
 	// Return user instance
-	return user;
+	return user.dataValues;
 };
