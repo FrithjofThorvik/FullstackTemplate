@@ -20,6 +20,7 @@ Create & connect to a new GitHub repository
   git remote add origin [GitHub Link]
   git add .
   git commit -m "First commit"
+  git push origin master
 </pre>
 
 ### Step 3 (Heroku)
